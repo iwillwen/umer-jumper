@@ -1,0 +1,21 @@
+{
+  "name": "umer-jumper",
+  "version": "0.0.1",
+  "description": "Umer Taobao Jumper",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "iwillwen",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.0.0-alpha.3",
+    "request": "^2.65.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.0.14",
+    "babel-preset-es2015-without-regenerator": "^1.0.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.0"
+  }
+}
