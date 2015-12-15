@@ -19,7 +19,7 @@ app.use(async function(ctx) {
 
   var urlInfo = url.parse(targetUrl)
 
-  if (urlInfo.query.itemId) {
+  if (urlInfo.query.itemid) {
     urlInfo.query.id = urlInfo.query.itemid
   }
 
