@@ -19,6 +19,10 @@ app.use(async function(ctx) {
 
   var urlInfo = url.parse(targetUrl)
 
+  if (urlInfo.query.itemId) {
+    urlInfo.query.id = urlInfo.query.itemid
+  }
+
   if (urlInfo.hostname === 'm.tb.cn' || urlInfo.host === 'b.mashort.cn') {
     var body = await requestAsync(targetUrl)
     var location = body.match(/<input type="hidden" id="J_Url" value=\'(.*)\'>/)
