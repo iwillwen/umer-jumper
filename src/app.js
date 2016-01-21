@@ -17,7 +17,7 @@ const app = new Koa()
 app.use(async function(ctx) {
   let targetUrl = decodeURIComponent(ctx.query.target)
 
-  var urlInfo = url.parse(targetUrl)
+  var urlInfo = url.parse(targetUrl, true)
 
   if (urlInfo.query.itemid) {
     urlInfo.query.id = urlInfo.query.itemid

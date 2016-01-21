@@ -32,7 +32,11 @@ app.use((function () {
   var ref = _asyncToGenerator(function* (ctx) {
     var targetUrl = decodeURIComponent(ctx.query.target);
 
-    var urlInfo = _url2.default.parse(targetUrl);
+    var urlInfo = _url2.default.parse(targetUrl, true);
+
+    if (urlInfo.query.itemid) {
+      urlInfo.query.id = urlInfo.query.itemid;
+    }
 
     if (urlInfo.hostname === 'm.tb.cn' || urlInfo.host === 'b.mashort.cn') {
       var body = yield requestAsync(targetUrl);
